@@ -10,7 +10,7 @@
 
 
 > Soal 1 -> apoole1
-2. Untuk soal pertama diminta "What was the username of the external contractor?", jawabannya dapat kita lihat dengan membuka file database yang diberikan.
+2. "What was the username of the external contractor?", jawabannya dapat kita lihat dengan membuka file database yang diberikan.
 
 `SELECT name FROM sqlite_master WHERE type='table'`
 
@@ -26,13 +26,13 @@ Lalu gunakan query di atas untuk menampilakan semua isi dari tabel tersebut dan 
 
 
 > Soal 2 -> 10.10.0.78
-3. Lanjut ke soal nomor 2 "What IP address did the contractor use to create their account?", jawabannya dapat dilihat di gambar sebelumnya
+3. "What IP address did the contractor use to create their account?", jawabannya dapat dilihat di gambar sebelumnya
 
 ![image](https://github.com/tkxldk/HTBlue/assets/89120989/63fe4828-cb99-4dfd-9f34-cfd74db4f683)
 
 
 > Soal 3 -> 9
-4. Ok, soal nomor 3 "What is the post_id of the malicious post that the contractor made?", untuk menjawabnya kita perlu menggunakan query yang pertama untuk melihat keseluruhan tabelnya. Dan saya menemukan terdapat tabel bernama phpbb_posts dan di dalamnya terdapat 3 baris dan salah satu post_textnya terdapat sebuah HTML code yang di dalamnya tertuliskan javascript yang kemungkinan besar meruapkan malicious code.
+4. "What is the post_id of the malicious post that the contractor made?", untuk menjawabnya kita perlu menggunakan query yang pertama untuk melihat keseluruhan tabelnya. Dan saya menemukan terdapat tabel bernama phpbb_posts dan di dalamnya terdapat 3 baris dan salah satu post_textnya terdapat sebuah HTML code yang di dalamnya tertuliskan javascript yang kemungkinan besar meruapkan malicious code.
 
 ![image](https://github.com/tkxldk/HTBlue/assets/89120989/88363eba-127a-434d-8ad7-55d6e2db49bb)
 
@@ -40,7 +40,7 @@ Lalu gunakan query di atas untuk menampilakan semua isi dari tabel tersebut dan 
 
 
 > Soal 4 -> 10.10.0.78
-5. Selanjutnya nomor 4 "What is the full URI that the credential stealer sends its data to?", pada post_text yang sebelumnya didapatkan saya menemukan adanya IP address
+5. "What is the full URI that the credential stealer sends its data to?", pada post_text yang sebelumnya didapatkan saya menemukan adanya IP address
 
 ![image](https://github.com/tkxldk/HTBlue/assets/89120989/c6633aa4-1e2e-46ac-9bb8-9e09378edacc)
 
@@ -56,5 +56,18 @@ Disini saya memperkirakan ketika user login, maka login form tersebut akan muncu
 
 ![image](https://github.com/tkxldk/HTBlue/assets/89120989/3a9405d7-f52e-4cda-9313-f15982542eb5)
 
-> Soal 6 -> 
-8. "In the forum there are plaintext credentials for the LDAP connection, what is the password?"
+
+> Soal 6 -> Passw0rd1
+8. "In the forum there are plaintext credentials for the LDAP connection, what is the password?", awalnya saya mencoba untuk memasukkan query pada databasenya untuk menemukan "%ldap%", namun dikarenakan keterbatasan skill, saya melakukan strings secara langsung pada databasenya dan mencari ldap.
+
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/b3495ab8-fca4-4f60-af84-67011d9151c3)
+
+
+> Soal 7 -> Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+9. "What is the user agent of the Administrator user?", untuk mendapatkan jawabannya, kita dapat melihat pada file access.log dan memastikan IP yang digunakan
+
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/2a414262-4961-47fc-b417-b6c377246f18)
+
+
+> Soal 8 -> 
+10. "What time did the contractor add themselves to the Administrator group? (UTC)"
