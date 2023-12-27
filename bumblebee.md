@@ -27,8 +27,17 @@ Lalu gunakan query di atas untuk menampilakan semua isi dari tabel tersebut dan 
 
 ![image](https://github.com/tkxldk/HTBlue/assets/89120989/63fe4828-cb99-4dfd-9f34-cfd74db4f683)
 
-4. Ok, soal nomor 3 "What is the post_id of the malicious post that the contractor made?", untuk menjawabnya kita perlu menggunakan query yang pertama untuk melihat keseluruhan tabelnya. Dan saya menemukan terdapat tabel bernama phpbb_posts dan di dalamnya terdapat 3 baris dan salah satunya terdapat sebuah HTML code yang di dalamnya tertuliskan javascript yang kemungkinan besar malicious.
+4. Ok, soal nomor 3 "What is the post_id of the malicious post that the contractor made?", untuk menjawabnya kita perlu menggunakan query yang pertama untuk melihat keseluruhan tabelnya. Dan saya menemukan terdapat tabel bernama phpbb_posts dan di dalamnya terdapat 3 baris dan salah satu post_textnya terdapat sebuah HTML code yang di dalamnya tertuliskan javascript yang kemungkinan besar meruapkan malicious code.
 
 ![image](https://github.com/tkxldk/HTBlue/assets/89120989/88363eba-127a-434d-8ad7-55d6e2db49bb)
 
-5. Selanjutnya nomor 4 "What is the full URI that the credential stealer sends its data to?", 
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/18b5efe6-196a-4b6a-a03a-e2c549d450d6)
+
+
+5. Selanjutnya nomor 4 "What is the full URI that the credential stealer sends its data to?", pada post_text yang sebelumnya didapatkan saya menemukan adanya IP address
+
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/c6633aa4-1e2e-46ac-9bb8-9e09378edacc)
+
+Disini saya memperkirakan ketika user login, maka login form tersebut akan muncul dan disubmit ke IP tersebut (10.10.0.78).
+
+6. 
