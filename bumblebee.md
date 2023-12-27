@@ -69,5 +69,21 @@ Disini saya memperkirakan ketika user login, maka login form tersebut akan muncu
 ![image](https://github.com/tkxldk/HTBlue/assets/89120989/2a414262-4961-47fc-b417-b6c377246f18)
 
 
-> Soal 8 -> 
-10. "What time did the contractor add themselves to the Administrator group? (UTC)"
+> Soal 8 -> 26/04/2023 10:53:51
+10. "What time did the contractor add themselves to the Administrator group? (UTC)", kita dapat melihat kembali ke phpbb_log, disana terdapat log yang dimana user ditambahkan. Menggunakan langkah yang sama dengan sebelumnya juga, ubah jamnya menjadi jam yang kita pahami, sehingga menjadi Wednesday, April 26, 2023 10:53:51 AM.
+
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/0e692bdb-21eb-44bb-9723-d83582e0e424)
+
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/b55b3eea-481c-4797-8035-6e0fe85654b9)
+
+
+> Soal 9 -> 26/04/2023 11:01:38
+11. "What time did the contractor download the database backup? (UTC)", kita dapat melihatnya di access.log untuk melihat kapan contractor mendownloadnya. Dari sekian log yang berhubungan dengan backup, saya menemukan adanya "store" yang menarik perhatian saya, sehingga saya membuat asumsi bahwa store adalah download. 26/Apr/2023:12:01:38 +0100 = GMT +1, kurangi waktunya 1 jam.
+
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/f17cda6e-88c2-46f7-8f4b-3b70ceee326a)
+
+
+> Soal 10 -> 34707
+12. "What was the size in bytes of the database backup as stated by access.log?", kita dapat menemukannya pada log sebelumnya.
+
+![image](https://github.com/tkxldk/HTBlue/assets/89120989/635bb504-4786-4079-a5c5-1767b81e0ac6)
